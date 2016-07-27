@@ -37,3 +37,11 @@
 +(BOOL)isBetweenFromHour:(NSInteger)fromHour toHour:(NSInteger)toHour;//当前时间是否在指定时间内
 
 ```
+# 安装
+### 源码安装
+1. 直接下载代码 集成到工程.
+### cocopods安装
+1. 未安装cocopods的自行安装.
+2. 执行pod search GWtool.
+3. 编辑Podfile,添加 pod 'GWTool', '~> 0.0.1'.
+4. 执行pod install --verbose --no-repo-update.
