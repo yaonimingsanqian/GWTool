@@ -7,6 +7,8 @@
 //
 
 #import "GWTool.h"
+#import <netdb.h>
+#include <arpa/inet.h>
 
 @implementation GWTool
 
@@ -173,5 +175,16 @@
     [resultComps setHour:hour];
     NSCalendar *resultCalendar = [NSCalendar currentCalendar];
     return [resultCalendar dateFromComponents:resultComps];
+}
++(NSString*)getIPAddressByHostName:(NSString*)strHostName
+{
+    struct hostent *hostentry;
+    hostentry = gethostbyname([strHostName UTF8String]);
+    if(hostentry == NULL){
+        return nil;
+    }
+    char * ipbuf;
+    ipbuf = inet_ntoa(*((struct in_addr *)hostentry->h_addr_list[0]));
+    return [NSString stringWithUTF8String:ipbuf];
 }
 @end
