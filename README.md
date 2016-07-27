@@ -35,6 +35,7 @@
 +(NSString*)timeSpToDateStr:(SInt32)timeSp format:(NSString*)format;
 +(NSDictionary*)strToJson:(NSString *)str; //字符串转字典
 +(BOOL)isBetweenFromHour:(NSInteger)fromHour toHour:(NSInteger)toHour;//当前时间是否在指定时间内
++(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip
 
 ```
 # 安装
@@ -46,3 +47,8 @@
 2. 执行pod search GWtool.
 3. 编辑Podfile,添加 pod 'GWTool', '~> 0.0.1'.
 4. 执行pod install --verbose --no-repo-update.
+
+# 更新记录
+### 0.0.2
+1. 增加函数 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip.
+
