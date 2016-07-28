@@ -51,7 +51,7 @@
 ### cocopods安装
 1. 未安装cocopods的自行安装.
 2. 执行pod search GWtool.
-3. 编辑Podfile,添加 pod 'GWTool', '~> 0.0.2'.
+3. 编辑Podfile,添加 pod 'GWTool', '~> 0.0.3'.
 4. 执行pod install --verbose --no-repo-update.
 
 # 更新记录
