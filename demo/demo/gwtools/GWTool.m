@@ -9,7 +9,7 @@
 #import "GWTool.h"
 #import <netdb.h>
 #include <arpa/inet.h>
-
+#import <AdSupport/AdSupport.h>
 @implementation GWTool
 
 +(void)execAfter:(double)seconds cb:(DelayExecCB)cb
@@ -186,5 +186,27 @@
     char * ipbuf;
     ipbuf = inet_ntoa(*((struct in_addr *)hostentry->h_addr_list[0]));
     return [NSString stringWithUTF8String:ipbuf];
+}
++(NSString*)getAppDocumentsDir
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    return docDir;
+}
++(NSString*)getAppCachesDir
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesDir = [paths objectAtIndex:0];
+    return cachesDir;
+}
++(NSString*)getAppTmpDir
+{
+    NSString *tmpDir = NSTemporaryDirectory();
+    return tmpDir;
+}
++(NSString*)getIDFA
+{
+    NSString *adid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    return adid;
 }
 @end
