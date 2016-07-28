@@ -37,6 +37,12 @@
 +(BOOL)isBetweenFromHour:(NSInteger)fromHour toHour:(NSInteger)toHour;//当前时间是否在指定时间内
 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip
 
++(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip
++(NSString*)getAppDocumentsDir;//获得app的 Documents目录
++(NSString*)getAppTmpDir;//获得app的tmp目录
++(NSString*)getAppCachesDir;//获得app的cache目录
++(NSString*)getIDFA;//获得idfa
+
 ```
 # 安装
 ### 源码安装
@@ -51,4 +57,9 @@
 # 更新记录
 ### 0.0.2
 1. 增加函数 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip.
-
+### 0.0.3
+1. 新增 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip
+2. 新增+(NSString*)getAppDocumentsDir;//获得app的 Documents目录
+3. 新增+(NSString*)getAppTmpDir;//获得app的tmp目录
+4. 新增+(NSString*)getAppCachesDir;//获得app的cache目录
+5. 新增+(NSString*)getIDFA;//获得idfa
