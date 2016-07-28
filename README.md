@@ -57,6 +57,7 @@
 # 更新记录
 ### 0.0.2
 1. 增加函数 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip.
+
 ### 0.0.3
 1. 新增 +(NSString*)getIPAddressByHostName:(NSString*)strHostName;//根据域名获得ip
 2. 新增+(NSString*)getAppDocumentsDir;//获得app的 Documents目录
